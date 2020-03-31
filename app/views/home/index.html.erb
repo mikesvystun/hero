@@ -1,11 +1,31 @@
 <div class="card">
-  <div class="card-header">
+  <div class="card-header gray">
     <%= link_to 'Click Here To Generate A New Superhero', root_path %>
   </div>
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <div class='row my-2'>
+      <div class='col-md-4'>
+        <%= image_tag @avatar %>
+      </div>
+      <div class='col-md-4'>
+        <h3>
+          Name:<br />
+          <span class='red'><%= @prefix + ' ' + @name %></span> <br />
+        </h3>
+        <h3>
+          Power:<br /> 
+          <span class='red'><%= @power %></span><br /><br />
+        </h3>
+        <h4>
+          Undercover Day Job Is: <br />
+          <span class='red'><%= @corp_title %><span> <br />
+        </h4>
+        <h4>
+          Coporate Superpower: <br />
+          <span class='red'><%= @corp_power%></span>
+        </h4>
+      </div>
+    </div>
   </div>
   <div class="card-footer">
     <%= link_to 'Create A Whole Superhero Team', home_team_path %>
