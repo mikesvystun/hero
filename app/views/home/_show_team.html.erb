@@ -1,0 +1,28 @@
+<% @team_size.to_i.times do %>
+    <div class='row my-2'>
+      <div class='col-md-4'>
+        <%= image_tag Faker::Avatar.image(slug: rand(1..100), size: "300x300", format: "png", set: "set#{rand(1..4)}", bgset: "bg#{rand(1..2)}")  %>
+      </div>
+      <div class='col-md-4'>
+        <h3>
+          Name:<br />
+          <span class='red'><%= Faker::Superhero.prefix + ' ' + Faker::Superhero.name %></span> <br />
+        </h3>
+        <h3>
+          Power:<br /> 
+          <span class='red'><%= Faker::Superhero.power %></span><br /><br />
+        </h3>
+        <h4>
+          Undercover Day Job Is: <br />
+          <span class='red'><%= Faker::Job.title %><span> <br />
+        </h4>
+        <h4>
+          Coporate Superpower: <br />
+          <span class='red'><%= Faker::Company.bs.titleize %></span>
+        </h4>
+      </div>
+    </div>
+    <div class='row'>
+      <hr>
+    </div>
+<% end %>

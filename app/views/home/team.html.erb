@@ -1,11 +1,13 @@
 <div class="card">
-  <div class="card-header">
-    <%= link_to 'Click Here To Generate A New Superhero', root_path %>
+  <div class="card-header gray">
+    <%= @team_size ? "Here's your team" : "How many team members do you want?" %>
   </div>
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <% if @team_size %>
+      <%= render 'show_team' %>
+    <% else %>
+      <%= render 'form' %>
+    <% end %>
   </div>
   <div class="card-footer">
     <%= link_to 'Create A Whole Superhero Team', home_team_path %>

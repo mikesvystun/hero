@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -59,4 +60,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
 gem 'faker', '~> 2.11'
-
+gem 'rubocop', require: false

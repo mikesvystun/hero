@@ -1,5 +1,6 @@
+# frozen_string_literal: true
 class HomeController < ApplicationController
-  before_action :get_name, only: [:index, :team]
+  before_action :get_name, only: [:index]
 
 
   def get_name
@@ -18,5 +19,6 @@ class HomeController < ApplicationController
   end
 
   def team
+    @team_size = params[:team_size]
   end
 end
